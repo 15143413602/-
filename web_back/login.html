@@ -51,35 +51,13 @@
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
-
-    <script src="./js/jquery-1.12.4.min.js"></script>
+      
+      <script src="./js/jquery-1.12.4.min.js"></script>
+      <script src="./js/uti/user.js"></script>
+    
     <script src="./js/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        var deng={
-          login:function(user,pass){ $.post(
-        'http://localhost:8000/admin/login',
-       {
-            user_name:user,
-            password:pass
-       } ,
-       function(res){
-           console.log(res);
-           if (res.code==200) {
-              //  alert('登录成功')
-              location.href='./index.html'
-               
-           }else{
-              //  alert('登陆失败')
-              $('#tishi').text('登陆失败')
-            $('#myModal').modal('show')
-           }
-           
-       }
-
-    )
-        }
-      }  
-    </script>
+    
+   
 
     <script>
        
@@ -97,7 +75,7 @@
         }
         
             //    发送请求
-        deng.login(user,pass)
+            user1.login(user,pass)
        })
 
     
