@@ -1,8 +1,9 @@
 {/* <script> */}
+var dress='http://localhost:8000'
 var user1={
   login:function(user,pass)
   { $.post(
-'http://localhost:8000/admin/login',
+    dress+'/admin/login',
 {
     user_name:user,
     password:pass
@@ -26,7 +27,7 @@ function(res){
 
         logout:function () {
             $.post(
-                'http://localhost:8000/admin/logout',
+                dress+'/admin/logout',
                 function(res){
                     console.log(res);
                     if (res.code==200) {
